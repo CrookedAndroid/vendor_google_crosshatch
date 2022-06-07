@@ -1566,6 +1566,13 @@ PRODUCT_COPY_FILES += \
     vendor/google/crosshatch/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/mbn_sw.dig:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/mbn_sw.dig \
     vendor/google/crosshatch/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/mbn_sw.txt:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/mbn_sw.txt
 
+# Columbus
+PRODUCT_COPY_FILES += \
+    vendor/google/crosshatch/proprietary/vendor/dsp/sdsp/columbus.napp_header:$(TARGET_COPY_OUT_VENDOR)/dsp/sdsp/columbus.napp_header \
+    vendor/google/crosshatch/proprietary/vendor/dsp/sdsp/columbus.so:$(TARGET_COPY_OUT_VENDOR)/dsp/sdsp/columbus.so \
+    vendor/google/crosshatch/proprietary/vendor/dsp/sdsp/columbus_lite.napp_header:$(TARGET_COPY_OUT_VENDOR)/dsp/sdsp/columbus_lite.napp_header \
+    vendor/google/crosshatch/proprietary/vendor/dsp/sdsp/columbus_lite.so:$(TARGET_COPY_OUT_VENDOR)/dsp/sdsp/columbus_lite.so
+
 PRODUCT_PACKAGES += \
     libMpeg4SwEncoder \
     libbtnv \
