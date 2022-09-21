@@ -8,6 +8,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/google/crosshatch/proprietary/etc/permissions/com.qualcomm.qcrilmsgtunnel.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qcrilmsgtunnel.xml \
     vendor/google/crosshatch/proprietary/etc/permissions/com.quicinc.cne.CNEService.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.quicinc.cne.CNEService.xml \
+    vendor/google/crosshatch/proprietary/etc/permissions/privapp-permissions-gms-s.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gms-s.xml \
     vendor/google/crosshatch/proprietary/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcrilhook.xml \
     vendor/google/crosshatch/proprietary/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/telephonyservice.xml \
     vendor/google/crosshatch/proprietary/etc/permissions/uimremoteclient.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/uimremoteclient.xml \
@@ -161,17 +162,52 @@ PRODUCT_COPY_FILES += \
     vendor/google/crosshatch/proprietary/product/etc/CarrierSettings/vodafone_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_tr.pb \
     vendor/google/crosshatch/proprietary/product/etc/CarrierSettings/windtre_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/windtre_it.pb \
     vendor/google/crosshatch/proprietary/product/etc/CarrierSettings/xfinity_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinity_us.pb \
+    vendor/google/crosshatch/proprietary/product/etc/ambient/matcher_tah.leveldb:$(TARGET_COPY_OUT_PRODUCT)/etc/ambient/matcher_tah.leveldb \
     vendor/google/crosshatch/proprietary/product/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/cne/Nexus/ATT/ATT_profiles.xml \
     vendor/google/crosshatch/proprietary/product/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/cne/Nexus/ROW/ROW_profiles.xml \
     vendor/google/crosshatch/proprietary/product/etc/cne/Nexus/VZW/VZW_profiles.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/cne/Nexus/VZW/VZW_profiles.xml \
     vendor/google/crosshatch/proprietary/product/etc/cne/andsfCne.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/cne/andsfCne.xml \
+    vendor/google/crosshatch/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
+    vendor/google/crosshatch/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
+    vendor/google/crosshatch/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
+    vendor/google/crosshatch/proprietary/product/etc/firmware/music_detector.descriptor:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.descriptor \
+    vendor/google/crosshatch/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.omadm.service.xml \
     vendor/google/crosshatch/proprietary/product/etc/permissions/com.android.sdm.plugins.connmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.connmo.xml \
     vendor/google/crosshatch/proprietary/product/etc/permissions/com.android.sdm.plugins.dcmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.dcmo.xml \
     vendor/google/crosshatch/proprietary/product/etc/permissions/com.android.sdm.plugins.diagmon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.diagmon.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.android.sdm.plugins.sprintdm.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.sprintdm.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.android.sdm.plugins.usccdm.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.usccdm.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.hardwareinfo.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.google.omadm.trigger.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.omadm.trigger.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.verizon.apn.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.verizon.apn.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/com.verizon.services.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.verizon.services.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/features-verizon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/features-verizon.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/privapp-permissions-gms-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-gms-p.xml \
+    vendor/google/crosshatch/proprietary/product/etc/permissions/privapp-permissions-google-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-p.xml \
+    vendor/google/crosshatch/proprietary/product/etc/res/images/charger/battery_fail.png:$(TARGET_COPY_OUT_PRODUCT)/etc/res/images/charger/battery_fail.png \
+    vendor/google/crosshatch/proprietary/product/etc/res/images/charger/battery_scale.png:$(TARGET_COPY_OUT_PRODUCT)/etc/res/images/charger/battery_scale.png \
+    vendor/google/crosshatch/proprietary/product/etc/res/images/charger/main_font.png:$(TARGET_COPY_OUT_PRODUCT)/etc/res/images/charger/main_font.png \
+    vendor/google/crosshatch/proprietary/product/etc/res/values/charger/animation.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/res/values/charger/animation.txt \
+    vendor/google/crosshatch/proprietary/product/etc/sysconfig/allowlist_com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.android.omadm.service.xml \
+    vendor/google/crosshatch/proprietary/product/etc/sysconfig/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
+    vendor/google/crosshatch/proprietary/product/etc/sysconfig/nexus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nexus.xml \
+    vendor/google/crosshatch/proprietary/product/etc/sysconfig/pixel_2018_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2018_exclusive.xml \
+    vendor/google/crosshatch/proprietary/product/etc/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml \
+    vendor/google/crosshatch/proprietary/product/etc/sysconfig/pixel_experience_2018.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2018.xml \
     vendor/google/crosshatch/proprietary/product/lib/libdmengine.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmengine.so \
     vendor/google/crosshatch/proprietary/product/lib/libdmjavaplugin.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmjavaplugin.so \
     vendor/google/crosshatch/proprietary/product/lib/libsecureuisvc_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsecureuisvc_jni.so \
     vendor/google/crosshatch/proprietary/product/lib64/libsecureuisvc_jni.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsecureuisvc_jni.so \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/com.android.omadm.radioconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.omadm.radioconfig.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/com.google.android.camera.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.android.camera.extensions.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/com.google.euiccpixel.permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.euiccpixel.permissions.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/com.google.euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.euiccpixel.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/google-ril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/google-ril.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/obdm_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/obdm_permissions.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/privapp-permissions-google-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-se.xml \
+    vendor/google/crosshatch/proprietary/system_ext/etc/permissions/vzw_mvs_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vzw_mvs_permissions.xml \
     vendor/google/crosshatch/proprietary/system_ext/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/google/crosshatch/proprietary/system_ext/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/google/crosshatch/proprietary/system_ext/lib/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.uceservice@2.0.so \
@@ -272,16 +308,52 @@ PRODUCT_PACKAGES += \
     uimremoteserver \
     CNEService \
     qcrilmsgtunnel \
+    MobileFeliCaClient \
+    MobileFeliCaMenuMainApp \
+    MobileFeliCaSettingApp \
+    MobileFeliCaWebPlugin \
+    MobileFeliCaWebPluginBoot \
+    PixelCameraServicesCrosshatch \
+    VZWAPNLib \
     com.qualcomm.qti.services.secureui \
+    AmbientSensePrebuilt \
+    AppDirectedSMSService \
+    CarrierServices \
+    CarrierSettings \
+    CarrierWifi \
+    ConnMO \
+    DCMO \
+    DMService \
+    DiagMon \
     EuiccGoogle \
+    HardwareInfo \
+    HotwordEnrollmentOKGoogleWCD9340 \
+    HotwordEnrollmentXGoogleWCD9340 \
+    OemDmTrigger \
+    SprintDM \
+    SprintHM \
+    TetheringEntitlement \
+    USCCDM \
+    WfcActivation \
+    CarrierSetup \
     EuiccSupportPixel \
     EuiccSupportPixelPermissions \
+    MyVerizonServices \
+    OBDM_Permissions \
+    RilConfigService \
+    grilservice \
+    obdm_stub \
     QtiTelephonyServicelibrary \
     qcrilhook \
     uimremoteclientlibrary \
     uimremoteserverlibrary \
+    libhwinfo \
+    RadioConfigLib \
+    com.android.hotwordenrollment.common.util \
+    com.google.android.camera.extensions \
     com.qualcomm.qti.uceservice-V2.0-java \
     com.qualcomm.qti.uceservice-V2.1-java \
+    google-ril \
     vendor.qti.hardware.alarm-V1.0-java \
     vendor.qti.hardware.data.latency-V1.0-java \
     vendor.qti.hardware.soter-V1.0-java \
